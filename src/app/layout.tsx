@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import TopLoader from "@/component/TopLoader";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function HomeLayout({
   const pathname = usePathname();
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-T6WT28TW" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
